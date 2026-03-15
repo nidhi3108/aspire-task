@@ -22,7 +22,7 @@ function App() {
 
   if (isMobile) {
     return (
-      <div className="min-h-screen bg-dark text-slate-800 font-sans pb-[86px]">
+      <div className="min-h-[140vh] bg-dark text-slate-800 font-sans pb-[86px]">
 
         {/* TOP BLUE AREA */}
         <div className="p-6 pt-10 relative z-20">
