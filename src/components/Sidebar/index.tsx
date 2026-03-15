@@ -53,7 +53,7 @@ export const Sidebar: React.FC = () => {
 
   return (
     <aside className="
-      fixed bottom-0 left-0 w-full h-[80px] bg-white-0 border-t border-slate-200 z-50
+      fixed bottom-0 left-0 w-full h-[80px] bg-white border-t border-slate-200 z-50
       md:relative md:h-screen md:w-[340px] md:bg-dark md:px-12 md:py-12 md:flex md:flex-col md:border-none
     ">
       <Logo />

@@ -9,7 +9,7 @@ interface BalanceHeaderProps {
 
 export const BalanceHeader: React.FC<BalanceHeaderProps> = ({ onNewCard, isMobile = false }) => {
   return (
-    <div className="flex flex-col md:flex-row md:items-end justify-between w-full mb-8">
+    <div className="flex  md:flex-row md:items-end justify-between w-full mb-8">
       <div>
         <h2 className={clsx(
           "text-sm md:text-base font-medium mb-2 md:mb-4",
@@ -29,8 +29,8 @@ export const BalanceHeader: React.FC<BalanceHeaderProps> = ({ onNewCard, isMobil
           </span>
         </div>
       </div>
-      
-      <button 
+
+      <button
         onClick={onNewCard}
         className={clsx(
           "mt-4 md:mt-0 flex items-center px-0 md:px-4 py-2 rounded-md transition-colors font-semibold max-w-fit",

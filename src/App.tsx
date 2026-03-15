@@ -75,30 +75,37 @@ function App() {
 
       <main className="flex-1 w-full bg-white md:p-14 p-6 pb-28 md:pb-14 shadow-2xl overflow-y-auto min-h-screen no-scrollbar relative ">
 
-        <div className="max-w-7xl mx-auto flex flex-col xl:flex-row gap-10">
+        <div className="max-w-7xl ">
 
-          <div className="flex-1 w-full xl:max-w-[450px]">
+          <div className="flex-1 w-full ">
             <BalanceHeader onNewCard={() => setIsModalOpen(true)} isMobile={false} />
+            <div className="flex flex-col p-2">
+              <div className="flex space-x-8 border-b border-slate-200 mb-8 mt-6">
+                <button className="text-slate-900 border-b-2 border-primary font-bold pb-2 text-[15px]">
+                  My debit cards
+                </button>
+                <button className="text-slate-400 font-medium pb-2 text-[15px] hover:text-slate-600 transition-colors">
+                  All company cards
+                </button>
+              </div>
 
-            <div className="flex space-x-8 border-b border-slate-200 mb-8 mt-6">
-              <button className="text-slate-900 border-b-2 border-primary font-bold pb-2 text-[15px]">
-                My debit cards
-              </button>
-              <button className="text-slate-400 font-medium pb-2 text-[15px] hover:text-slate-600 transition-colors">
-                All company cards
-              </button>
             </div>
+            <div className=''>
+              <div className="bg-white md:shadow-lg md:border border-slate-100 md:p-8 rounded-xl mb-6 flex gap-10">
+                <div className="w-[420px] flex-shrink-0">
+                  <CardCarousel />
+                  <CardActions />
+                </div>
 
-            <div className="bg-white-0 md:shadow-lg md:border border-slate-100 md:p-8 rounded-xl mb-6">
-              <CardCarousel />
-              <CardActions />
+                <div className="flex-1">
+                  <Accordion card={activeCard} />
+                  <Transactions />
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="flex-1 w-full xl:pl-10 xl:pt-[106px]">
-            <Accordion card={activeCard} />
-            <Transactions />
-          </div>
+
 
         </div>
       </main>
