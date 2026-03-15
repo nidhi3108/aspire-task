@@ -14,7 +14,8 @@ function App() {
   const { loadCards, addCard, cards, activeCardId } = useCardStore();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const isMobile = useIsMobile();
-  const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const [cardName, setCardName] = useState('');
+  const [error, setError] = useState("");
   useEffect(() => {
     loadCards();
   }, [loadCards]);
@@ -62,8 +63,9 @@ function App() {
 
         <AddCardModal
           isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
+          onClose={() => { setIsModalOpen(false); }}
           onSubmit={(name) => addCard(name)}
+
         />
       </div>
     );
